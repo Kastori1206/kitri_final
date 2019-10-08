@@ -25,10 +25,28 @@ public class HomeController {
 	public String registerView() {	
 		return "/login/register";
 	}
+	@RequestMapping(value = "/home", method = RequestMethod.POST)
+	public String homeView(Model model) {		
+		model.addAttribute("viewFile","/WEB-INF/views/dashboard/dashboard.jsp");
+		return "layout";
+	}
 	@RequestMapping(value = "/home", method = RequestMethod.GET)
-	public String homeView() {		
-		
-		return "home";
+	public String home1View(Model model) {		
+		model.addAttribute("viewFile","/WEB-INF/views/dashboard/dashboard.jsp");
+		return "layout";
+	}
+	@RequestMapping(value = "/board", method = RequestMethod.GET)
+	public String boardView(Model model) {		
+		model.addAttribute("viewFile","/WEB-INF/views/board/board.jsp");
+
+		return "layout";
+	}
+	
+	@RequestMapping(value = "/calendar", method = RequestMethod.GET)
+	public String calendarView(Model model) {		
+		model.addAttribute("viewFile","/WEB-INF/views/calendar/calendar.jsp");
+
+		return "layout";
 	}
 	
 }

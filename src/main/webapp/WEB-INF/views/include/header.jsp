@@ -14,6 +14,12 @@
 	<link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
 	<!-- Tempusdominus Bbootstrap 4 -->
 	<link rel="stylesheet" href="resources/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
+	<!-- fullCalendar -->
+	<link rel="stylesheet" href="resources/plugins/fullcalendar/main.min.css">
+	<link rel="stylesheet" href="resources/plugins/fullcalendar-interaction/main.min.css">
+	<link rel="stylesheet" href="resources/plugins/fullcalendar-daygrid/main.min.css">
+	<link rel="stylesheet" href="resources/plugins/fullcalendar-timegrid/main.min.css">
+	<link rel="stylesheet" href="resources/plugins/fullcalendar-bootstrap/main.min.css">
 	<!-- iCheck -->
 	<link rel="stylesheet" href="resources/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
 	<!-- JQVMap -->
@@ -173,7 +179,7 @@
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="/pms/home" class="nav-link">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
                 개인대시보드
@@ -182,8 +188,8 @@
          
           </li>
           <li class="nav-header">프로젝트 목록</li>
-          <li class="nav-item has-treeview menu-open">
-            <a href="#" class="nav-link active">
+          <li class="nav-item has-treeview menu-close">
+            <a href="#" class="nav-link">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
                 프로젝트 이름
@@ -192,21 +198,21 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="./index.html" class="nav-link">
+                <a href="/pms/board" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Dashboard v1</p>
+                  <p>공지사항</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="./index2.html" class="nav-link active">
+                <a href="/pms/calendar" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Dashboard v2</p>
+                  <p>일정</p>
                 </a>
               </li>
               <li class="nav-item">
                 <a href="./index3.html" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Dashboard v3</p>
+                  <p>위험/리스크</p>
                 </a>
               </li>
             </ul>

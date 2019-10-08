@@ -21,6 +21,10 @@ public class HomeController {
 	public String loginView() {	
 		return "/login/login";
 	}
+	@RequestMapping(value = "/register", method = RequestMethod.GET)
+	public String registerView() {	
+		return "/login/register";
+	}
 	@RequestMapping(value = "/home", method = RequestMethod.GET)
 	public String homeView() {		
 		

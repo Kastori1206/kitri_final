@@ -80,7 +80,7 @@
         <a href="#">비밀번호 찾기</a>
       </p>
       <p class="mb-0">
-        <a href="register.html" class="text-center">회원가입</a>
+        <a href="/pms/register" class="text-center">회원가입</a>
       </p>
     </div>
     <!-- /.login-card-body -->

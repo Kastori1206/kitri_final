@@ -27,26 +27,28 @@ public class HomeController {
 	}
 	@RequestMapping(value = "/home", method = RequestMethod.POST)
 	public String homeView(Model model) {		
-		model.addAttribute("viewFile","/WEB-INF/views/dashboard/dashboard.jsp");
-		return "layout";
+		return ".tiles/dashboard/dashboard";
 	}
 	@RequestMapping(value = "/home", method = RequestMethod.GET)
 	public String home1View(Model model) {		
-		model.addAttribute("viewFile","/WEB-INF/views/dashboard/dashboard.jsp");
-		return "layout";
+		return ".tiles/dashboard/dashboard";
 	}
 	@RequestMapping(value = "/board", method = RequestMethod.GET)
-	public String boardView(Model model) {		
-		model.addAttribute("viewFile","/WEB-INF/views/board/board.jsp");
+	public String boardView(Model model) {	
 
-		return "layout";
+		return ".tiles/board/board";
 	}
 	
 	@RequestMapping(value = "/calendar", method = RequestMethod.GET)
 	public String calendarView(Model model) {		
 		model.addAttribute("viewFile","/WEB-INF/views/calendar/calendar.jsp");
 
-		return "layout";
+		return ".tiles/calendar/calendar";
 	}
-	
+	@RequestMapping(value = "/gantt", method = RequestMethod.GET)
+	public String ganttView(Model model) {		
+		
+
+		return ".tiles/calendar/gantt";
+	}
 }

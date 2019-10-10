@@ -2,19 +2,22 @@
 <%@ page session="false"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %> 
-<%@include file="include/header.jsp"%>
+<%@ taglib uri="http://tiles.apache.org/tags-tiles" prefix="tiles" %>
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+<meta charset="UTF-8">
+	<tiles:insertAttribute name="header"/>
+</head>
+<body class="hold-transition sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed">
+	<tiles:insertAttribute name="nav"/>
+	<tiles:insertAttribute name="left"/>
+    <!-- /.content -->
+	<tiles:insertAttribute name="content"/>    
+  
 
-<jsp:include page="${viewFile }"/>
 
 
-
-
-
-  <!-- Control Sidebar -->
-  <aside class="control-sidebar control-sidebar-dark">
-    <!-- Control sidebar content goes here -->
-  </aside>
-  <!-- /.control-sidebar -->
   <!-- jQuery -->
 <script src="resources/plugins/jquery/jquery.min.js"></script>
 <!-- jQuery UI 1.11.4 -->
@@ -49,7 +52,8 @@
 <script src="resources/dist/js/pages/dashboard.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="resources/dist/js/demo.js"></script>
+	<tiles:insertAttribute name="footer"/>    
 
-<%@include file="include/footer.jsp"%>
-
-
+</body>
+</html>
+ 

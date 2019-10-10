@@ -8,8 +8,5 @@
       <b>Version</b> 3.0.0-rc.3
     </div>
   </footer>
-</div>
-</body>
-</html>
- 
+
 

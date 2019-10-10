@@ -94,7 +94,7 @@
         </a>
       </div>
 
-      <a href="/pms/" class="text-center">I already have a membership</a>
+      <a href="${pageContext.request.contextPath}" class="text-center">I already have a membership</a>
     </div>
     <!-- /.form-box -->
   </div><!-- /.card -->

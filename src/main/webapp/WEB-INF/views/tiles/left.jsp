@@ -58,6 +58,12 @@
                 </a>
               </li>
               <li class="nav-item">
+                <a href="/pms/community" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>커뮤니티</p>
+                </a>
+              </li>
+              <li class="nav-item">
                 <a href="/pms/gantt" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>간트차트</p>

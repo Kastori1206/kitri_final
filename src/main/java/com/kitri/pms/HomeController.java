@@ -27,28 +27,40 @@ public class HomeController {
 	}
 	@RequestMapping(value = "/home", method = RequestMethod.POST)
 	public String homeView(Model model) {		
+		model.addAttribute("title", "대시보드");
 		return ".tiles/dashboard/dashboard";
 	}
 	@RequestMapping(value = "/home", method = RequestMethod.GET)
 	public String home1View(Model model) {		
+		model.addAttribute("title", "대시보드");
 		return ".tiles/dashboard/dashboard";
 	}
 	@RequestMapping(value = "/board", method = RequestMethod.GET)
 	public String boardView(Model model) {	
-
+		model.addAttribute("title", "공지");
 		return ".tiles/board/board";
 	}
 	
 	@RequestMapping(value = "/calendar", method = RequestMethod.GET)
 	public String calendarView(Model model) {		
-		model.addAttribute("viewFile","/WEB-INF/views/calendar/calendar.jsp");
+		model.addAttribute("title", "일정");
 
 		return ".tiles/calendar/calendar";
 	}
 	@RequestMapping(value = "/gantt", method = RequestMethod.GET)
 	public String ganttView(Model model) {		
-		
+		model.addAttribute("title", "간트차트");
 
 		return ".tiles/calendar/gantt";
+	}
+	@RequestMapping(value = "/community", method = RequestMethod.GET)
+	public String communityView(Model model) {			
+		model.addAttribute("title", "커뮤니티");
+		return ".tiles/community/community";
+	}
+	@RequestMapping(value = "/dashboard/addprojcet", method = RequestMethod.GET)
+	public String addprojectView(Model model) {			
+		
+		return ".tiles/project/projectadd";
 	}
 }

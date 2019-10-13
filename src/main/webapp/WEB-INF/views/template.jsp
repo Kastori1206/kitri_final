@@ -7,7 +7,7 @@
 <html lang="kr">
 <head>
 <meta charset="UTF-8">
-	<tiles:insertAttribute name="header"/>
+	<tiles:insertAttribute name="header"/>	
 </head>
 <body class="hold-transition sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed">
 	<tiles:insertAttribute name="nav"/>

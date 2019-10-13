@@ -1,12 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
-</head>
-<body>
+  <div class="content-wrapper" style="min-height: 1416.81px;">
+
 <div class="card card-primary">
             <div class="card-header">
               <h3 class="card-title">General</h3>
@@ -45,5 +40,4 @@
             </div>
             <!-- /.card-body -->
           </div>
-</body>
-</html>
+</div>

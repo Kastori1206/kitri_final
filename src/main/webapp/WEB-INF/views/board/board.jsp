@@ -85,6 +85,8 @@
               </div>
               <!-- /.card-body -->
               <div class="card-footer clearfix">
+            	<button type="button" class="btn btn-block btn-secondary btn-sm">글쓰기</button>
+              	
                 <ul class="pagination pagination-sm m-0 float-right">
                   <li class="page-item"><a class="page-link" href="#">«</a></li>
                   <li class="page-item"><a class="page-link" href="#">1</a></li>
@@ -95,6 +97,7 @@
               </div>
         </div>
         <!-- /.card-body -->
+        
         
       </div>
       <!-- /.card -->

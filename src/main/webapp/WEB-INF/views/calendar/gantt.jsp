@@ -1,78 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 
-<div class="container-fluid">
-	<div class="row">
-		<div class="col-md-12">
-			<div class="navbar navbar-inverse">
-				<div class="container">
-					<div class="navbar-header">
-						<button type="button" class="navbar-toggle" data-toggle="collapse"
-								data-target=".navbar-collapse">
-							<span class="sr-only">Toggle navigation</span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-						</button>
-						<a class="navbar-brand" href="#">Basic Gantt Chart</a>
-					</div>
-					<div class="navbar-collapse collapse">
-						<ul class="nav navbar-nav">
-							<li class="dropdown">
-								<a href="#" class="dropdown-toggle" data-toggle="dropdown">Project <span
-										class="caret"></span></a>
-								<ul class="dropdown-menu" role="menu">
-									<li><a href="#">Project information</a></li>
-									<li><a href="#">Custom fields</a></li>
-									<li><a href="#">Change working time</a></li>
-									<li class="divider"></li>
-									<li><a href="#">Export</a></li>
-								</ul>
-							</li>
-							<li class="dropdown">
-								<a href="#" class="dropdown-toggle" data-toggle="dropdown">Task <span
-										class="caret"></span></a>
-								<ul class="dropdown-menu" role="menu">
-									<li><a href="#">Add task</a></li>
-									<li><a href="#">Add milestone</a></li>
-									<li class="divider"></li>
-									<li><a href="#">Summary</a></li>
-								</ul>
-							</li>
-							<li><a href="#">Team</a></li>
-							<li><a href="#">Format</a></li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="row">
-		<div class="col-md-2 col-md-push-10">
-			<div class="panel panel-default">
-				<div class="panel-heading">
-					<h3 class="panel-title">Gantt info</h3>
-				</div>
-				<div class="panel-body">
-					<ul class="nav nav-pills nav-stacked" id="gantt_info">
-					</ul>
-				</div>
-			</div>
-		</div>
-		<div class="col-md-10 col-md-pull-2">
-			<div class="gantt_wrapper panel" id="gantt_here"></div>
-		</div>
-	</div>
-	<div class="row">
-		<div class="col-md-12">
-			<div class="well">
-				<div>
-					<a class="logo" title="DHTMLX - JavaScript Web App Framework &amp; UI Widgets"
-					   href="http://dhtmlx.com/docs/products/dhtmlxGantt/">&copy; DHTMLX</a>
-				</div>
-			</div>
-		</div>
-	</div>
+<div class="content-wrapper" style="min-height: 1416.81px;">		
+   <div id="gantt_here" style='width:100%; height: 700px;'></div>
+    <script type="text/javascript">
+        gantt.init("gantt_here");
+    </script>
+	
 </div>
 
 <script>

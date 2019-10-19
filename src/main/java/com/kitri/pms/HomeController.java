@@ -58,9 +58,10 @@ public class HomeController {
 		model.addAttribute("title", "커뮤니티");
 		return ".tiles/community/community";
 	}
-	@RequestMapping(value = "/dashboard/addprojcet", method = RequestMethod.GET)
-	public String addprojectView(Model model) {			
+	
+	@RequestMapping(value = "/contact", method = RequestMethod.GET)
+	public String contactView(Model model) {			
 		
-		return ".tiles/project/projectadd";
+		return ".tiles/community/contact";
 	}
 }

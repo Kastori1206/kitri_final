@@ -3,7 +3,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 
-<html><head>
+<html>
+<head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>AdminLTE 3 | Log in</title>
@@ -65,7 +66,7 @@
         </div>
       </form>
 
-      <div class="social-auth-links text-center mb-3">
+     <!--  <div class="social-auth-links text-center mb-3">
         <p>- OR -</p>
         <a href="#" class="btn btn-block btn-primary">
           <i class="fab fa-facebook mr-2"></i> Facebook으로 로그인
@@ -74,7 +75,7 @@
           <i class="fab fa-google-plus mr-2"></i> Google+으로 로그인
         </a>
       </div>
-      <!-- /.social-auth-links -->
+      /.social-auth-links -->
 
       <p class="mb-1">
         <a href="#">비밀번호 찾기</a>
@@ -97,4 +98,5 @@
 
 
 
-</body></html>
+</body>
+</html>

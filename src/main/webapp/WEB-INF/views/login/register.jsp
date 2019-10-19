@@ -25,7 +25,7 @@
 <body class="hold-transition register-page">
 <div class="register-box">
   <div class="register-logo">
-    <a href="../../index2.html"><b>Admin</b>LTE</a>
+    <a href="/pms"><b>Kitri</b>LTE</a>
   </div>
 
   <div class="card">
@@ -82,7 +82,7 @@
         </div>
       </form>
 
-      <div class="social-auth-links text-center">
+<!--       <div class="social-auth-links text-center">
         <p>- OR -</p>
         <a href="#" class="btn btn-block btn-primary">
           <i class="fab fa-facebook mr-2"></i>
@@ -92,7 +92,7 @@
           <i class="fab fa-google-plus mr-2"></i>
           Sign up using Google+
         </a>
-      </div>
+      </div> -->
 
       <a href="${pageContext.request.contextPath}" class="text-center">I already have a membership</a>
     </div>

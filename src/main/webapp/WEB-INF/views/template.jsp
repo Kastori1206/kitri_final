@@ -24,7 +24,10 @@
 <script src="resources/plugins/jquery-ui/jquery-ui.min.js"></script>
 <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
 <script>
-  $.widget.bridge('uibutton', $.ui.button)
+  $.widget.bridge('uibutton', $.ui.button);
+  $('#chat-pane-toggle').DirectChat('toggle');
+
+  
 </script>
 <!-- Bootstrap 4 -->
 <script src="resources/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>

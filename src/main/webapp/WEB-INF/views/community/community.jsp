@@ -1,9 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-
-
-
-
+    
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper" style="min-height: 1416.81px;">
     <!-- Content Header (Page header) -->

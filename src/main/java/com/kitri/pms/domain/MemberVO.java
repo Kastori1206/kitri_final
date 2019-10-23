@@ -9,6 +9,19 @@ public class MemberVO {
 	private String m_image;
 	private String m_phone;
 	private String m_email;
+	
+	
+	public MemberVO() {
+		super();
+	}
+	public MemberVO(String m_id, String m_pw, String m_name, String m_phone, String m_email) {
+		super();
+		this.m_id = m_id;
+		this.m_pw = m_pw;
+		this.m_name = m_name;
+		this.m_phone = m_phone;
+		this.m_email = m_email;
+	}
 	public String getM_id() {
 		return m_id;
 	}

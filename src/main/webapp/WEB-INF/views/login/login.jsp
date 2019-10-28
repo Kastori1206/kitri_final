@@ -21,6 +21,25 @@
   <link rel="stylesheet" href="resources/dist/css/adminlte.min.css">
   <!-- Google Font: Source Sans Pro -->
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+  <script>
+  	$(document).ready(function(){
+  		$("#btnLogin").click(function(){
+  			var userId = $("#userId").val();
+  			var userPw = $("#userPw").val();
+  			if(userId ==""){
+  				alert("아이디를 입력하세요.");
+  				$("#userId").focus();
+  				return;
+  			}
+  			if(userPw ==""){
+  				alert("비밀번호를 입력하세요.");
+  				$("#userPw").focus();
+  				return;  				
+  			}
+  			document.form1.ac
+  		});
+  	});
+  </script>
 </head>
 <body class="login-page" style="min-height: 512.391px;">
 <div class="login-box">

@@ -17,14 +17,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 public class HomeController {
 	
-	@RequestMapping(value = "/", method = RequestMethod.GET)
-	public String loginView() {	
-		return "/login/login";	
-	}
-	@RequestMapping(value = "/register", method = RequestMethod.GET)
-	public String registerView() {	
-		return "/login/register";
-	}
+	
+	
 	@RequestMapping(value = "/home", method = RequestMethod.POST)
 	public String homeView(Model model) {		
 		model.addAttribute("title", "대시보드");

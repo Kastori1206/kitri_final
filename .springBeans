@@ -9,6 +9,7 @@
 	<configs>
 		<config>src/main/webapp/WEB-INF/tiles/tiles.xml</config>
 		<config>src/main/resources/mappers/memberMapper.xml</config>
+		<config>src/main/resources/mappers/projectMapper.xml</config>
 	</configs>
 	<autoconfigs>
 		<config>src/main/webapp/WEB-INF/spring/appServlet/servlet-context.xml</config>

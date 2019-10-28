@@ -4,45 +4,62 @@ import java.util.List;
 
 import javax.servlet.http.HttpSession;
 
-import org.apache.ibatis.session.SqlSession;
 import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
+import org.springframework.stereotype.Service;
 
 import com.kitri.pms.domain.MemberVO;
 
-@Repository("MemberDAO")
-public class MemberDAO {
-	
+@Service
+public class MemberServiceImpl implements MemberService{
+
 	@Autowired
-	private SqlSessionTemplate sqlSession;
+	private MemberDAO dao;
 	
-	public MemberDAO() {
-		
+	public MemberServiceImpl() {
 	}
+	
+	@Override
 	public void updateMember(MemberVO vo) {
-		sqlSession.update("MemberDAO.updateMember",vo);
-	}
-	public void deleteMember(MemberVO vo) {
-		sqlSession.delete("MemberDAO.deleteMember",vo);
-	}
-	public void insertMember(MemberVO vo) {
-		sqlSession.insert("MemberDAO.insertMember",vo);
+		dao.updateMember(vo);
 	}
 
-	public MemberVO getMember(String id) {
-		return sqlSession.selectOne("MemberDAO.getMember",id);
+	@Override
+	public void deleteMember(MemberVO vo) {
+		// TODO Auto-generated method stub
+		dao.deleteMember(vo);
 	}
-	
+
+	@Override
+	public void insertMember(MemberVO vo) {
+		// TODO Auto-generated method stub
+		dao.insertMember(vo);
+	}
+
+	@Override
+	public MemberVO getMember(String id) {
+		// TODO Auto-generated method stub
+		return dao.getMember(id);
+	}
+
+	@Override
 	public List<MemberVO> getMemberList() {
 		// TODO Auto-generated method stub
-		return sqlSession.selectList("MemberDAO.getAllMember");
+		return dao.getMemberList();
 	}
+
+	@Override
 	public boolean loginCheck(MemberVO vo) {
-		String name = sqlSession.selectOne("MemberDAO.loginCheck",vo);
-		return (name == null) ? false : true;
+		
+		return dao.loginCheck(vo);
 	}
+
+	@Override
 	public void logout(HttpSession session) {
-		session.invalidate();
+		dao.logout(session);
 	}
+
+
+
 }

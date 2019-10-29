@@ -40,6 +40,7 @@ public class MemberDAO {
 	}
 	public boolean loginCheck(MemberVO vo) {
 		String name = sqlSession.selectOne("MemberDAO.loginCheck",vo);
+		System.out.println(name);
 		return (name == null) ? false : true;
 	}
 	public void logout(HttpSession session) {

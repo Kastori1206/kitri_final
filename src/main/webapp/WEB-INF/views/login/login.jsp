@@ -21,6 +21,9 @@
   <link rel="stylesheet" href="resources/dist/css/adminlte.min.css">
   <!-- Google Font: Source Sans Pro -->
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+  
+	<!-- jQuery -->
+	<script src="resources/plugins/jquery/jquery.min.js"></script>
   <script>
   	$(document).ready(function(){
   		$("#btnLogin").click(function(){
@@ -29,14 +32,16 @@
   			if(userId ==""){
   				alert("아이디를 입력하세요.");
   				$("#userId").focus();
-  				return;
+  				return false;
   			}
   			if(userPw ==""){
   				alert("비밀번호를 입력하세요.");
   				$("#userPw").focus();
-  				return;  				
+  				return false;  				
   			}
-  			document.form1.ac
+  			
+  			document.loginform.action="/pms/loginCheck";
+  			document.loginform.submit();
   		});
   	});
   </script>
@@ -51,9 +56,9 @@
     <div class="card-body login-card-body">
       <p class="login-box-msg">로그인</p>
 
-      <form action="/pms/home" method="post">
+      <form name="loginform" method="post">
         <div class="input-group mb-3">
-          <input type="test" class="form-control" placeholder="아이디">
+          <input type="test" class="form-control" id="userId" name="m_id" placeholder="아이디">
           <div class="input-group-append">
             <div class="input-group-text">
               <span class="fas fa-envelope"></span>
@@ -61,7 +66,7 @@
           </div>
         </div>
         <div class="input-group mb-3">
-          <input type="password" class="form-control" placeholder="패스워드">
+          <input type="password" class="form-control" id="userPw" name="m_pw" placeholder="패스워드">
           <div class="input-group-append">
             <div class="input-group-text">
               <span class="fas fa-lock"></span>
@@ -79,7 +84,10 @@
           </div>
           <!-- /.col -->
           <div class="col-4">
-            <button type="submit" class="btn btn-primary btn-block btn-flat">로그인</button>
+            <button type="submit" class="btn btn-primary btn-block btn-flat" id="btnLogin">로그인</button>                     
+            <c:if test=" ${msg == 'failure' }">
+            	
+            </c:if>
           </div>
           <!-- /.col -->
         </div>
@@ -108,8 +116,6 @@
 </div>
 <!-- /.login-box -->
 
-<!-- jQuery -->
-<script src="resources/plugins/jquery/jquery.min.js"></script>
 <!-- Bootstrap 4 -->
 <script src="resources/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 <!-- AdminLTE App -->

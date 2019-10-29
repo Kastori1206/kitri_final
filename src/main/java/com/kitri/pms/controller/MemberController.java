@@ -22,7 +22,7 @@ public class MemberController {
 	
 	@RequestMapping(value="/", method = RequestMethod.GET)
 	public ModelAndView loginView(ModelAndView mv) {
-		mv.setViewName("/login/login");
+		mv.setViewName("login/login");
 		return mv;
 	}
 	
@@ -48,20 +48,22 @@ public class MemberController {
         return result;
     }
  
-    @RequestMapping("loginCheck")
+    @RequestMapping(value="/loginCheck", method=RequestMethod.POST)
     public ModelAndView loginCheck(@ModelAttribute MemberVO vo, HttpSession session) {
     	boolean result = memberService.loginCheck(vo);
+    	System.out.println(vo.getM_id() + vo.getM_pw());
     	ModelAndView mv = new ModelAndView();
+    	System.out.println(result);
     	if(result == true) {
-    		mv.setViewName("");
+    		mv.setViewName("redirect:/home");
     		mv.addObject("msg","success");
     	}else {
-    		mv.setViewName("");
+    		mv.setViewName("login/login");
     		mv.addObject("msg","failure");
     	}
     	return mv;
     }
-    @RequestMapping("logout")
+    @RequestMapping("/logout")
     public ModelAndView logout(HttpSession session) {
     	memberService.logout(session);
     	ModelAndView mv= new ModelAndView();

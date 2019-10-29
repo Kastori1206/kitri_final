@@ -15,16 +15,10 @@ import org.springframework.web.bind.annotation.RequestMethod;
  * Handles requests for the application home page.
  */
 @Controller
-public class HomeController {
+public class HomeController {	
 	
-	
-	
-	@RequestMapping(value = "/home", method = RequestMethod.POST)
-	public String homeView(Model model) {		
-		model.addAttribute("title", "대시보드");
-		return ".tiles/dashboard/dashboard";
-	}
-	@RequestMapping(value = "/home", method = RequestMethod.GET)
+
+	@RequestMapping(value = "/home",method={RequestMethod.GET,RequestMethod.POST})
 	public String home1View(Model model) {		
 		model.addAttribute("title", "대시보드");
 		return ".tiles/dashboard/dashboard";

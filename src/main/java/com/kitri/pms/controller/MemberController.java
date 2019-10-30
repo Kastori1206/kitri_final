@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import org.springframework.web.servlet.view.RedirectView;
 
 import com.kitri.pms.domain.MemberVO;
@@ -49,19 +50,16 @@ public class MemberController {
     }
  
     @RequestMapping(value="/loginCheck", method=RequestMethod.POST)
-    public ModelAndView loginCheck(@ModelAttribute MemberVO vo, HttpSession session) {
-    	boolean result = memberService.loginCheck(vo);
-    	System.out.println(vo.getM_id() + vo.getM_pw());
-    	ModelAndView mv = new ModelAndView();
-    	System.out.println(result);
+    public String loginCheck(@ModelAttribute MemberVO vo, HttpSession session, RedirectAttributes redirectAttributes) {
+
+    	boolean result = memberService.loginCheck(vo,session);
     	if(result == true) {
-    		mv.setViewName("redirect:/home");
-    		mv.addObject("msg","success");
+    		return "redirect:/home";
     	}else {
-    		mv.setViewName("login/login");
-    		mv.addObject("msg","failure");
+    		redirectAttributes.addFlashAttribute("msg","failure");
+    		return "redirect:/";
     	}
-    	return mv;
+    	
     }
     @RequestMapping("/logout")
     public ModelAndView logout(HttpSession session) {

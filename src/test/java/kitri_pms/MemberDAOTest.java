@@ -25,10 +25,9 @@ public class MemberDAOTest {
 	private MemberDAO dao;
 	@Test
 	public void test() {
-		List<MemberVO> list = dao.getMemberList();
-		for(MemberVO vo : list) {
-			System.out.println(vo.toString());
-		}
+		int result = dao.getMemberCnt();
+		System.out.println(result);
+		
 	}
 	public void test1() {
 		MemberVO vo = dao.getMember("test");

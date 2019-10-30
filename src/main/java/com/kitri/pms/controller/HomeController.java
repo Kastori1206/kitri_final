@@ -49,7 +49,15 @@ public class HomeController {
 	
 	@RequestMapping(value = "/contact", method = RequestMethod.GET)
 	public String contactView(Model model) {			
-		
+		int pageSize = 9;// 한페이지에 나오는 게시물 개수
+	    int pageIndex = 0; //현재 선택한 페이지 number
+	    
+	    int startRow = (pageIndex - 1) * pageSize + 1;// 한 페이지의 시작글 번호
+	    int endRow = pageIndex * pageSize;// 한 페이지의 마지막 글번호
+	 
+
+
+		출처: https://lee-mandu.tistory.com/371 [개발/일상_Mr.lee]
 		return ".tiles/community/contact";
 	}
 }

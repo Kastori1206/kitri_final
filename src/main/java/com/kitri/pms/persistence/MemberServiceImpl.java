@@ -49,15 +49,28 @@ public class MemberServiceImpl implements MemberService{
 		return dao.getMemberList();
 	}
 
-	@Override
-	public boolean loginCheck(MemberVO vo) {
-		
-		return dao.loginCheck(vo);
-	}
+
 
 	@Override
 	public void logout(HttpSession session) {
 		dao.logout(session);
+	}
+
+	@Override
+	public boolean loginCheck(MemberVO vo, HttpSession session) {
+		boolean result = dao.loginCheck(vo);
+		if(result) {
+			MemberVO vo2 = dao.getMember(vo.getM_id());
+			session.setAttribute("userId", vo2.getM_id());
+			session.setAttribute("userName", vo2.getM_name());
+		}
+		return result;		
+	}
+
+	@Override
+	public int getMemberCnt() {
+	
+		return dao.getMemberCnt();
 	}
 
 

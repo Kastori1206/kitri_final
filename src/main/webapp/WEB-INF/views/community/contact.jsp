@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
 <div class="content-wrapper" style="min-height: 1416.81px;">
     <!-- Content Header (Page header) -->
@@ -26,7 +27,8 @@
       <div class="card card-solid">
         <div class="card-body pb-0">
           <div class="row d-flex align-items-stretch">
-            <div class="col-12 col-sm-6 col-md-4 d-flex align-items-stretch">
+          	<c:forEach>
+          		<div class="col-12 col-sm-6 col-md-4 d-flex align-items-stretch">
               <div class="card bg-light">
                 <div class="card-header text-muted border-bottom-0">
                   Digital Strategist
@@ -42,7 +44,7 @@
                       </ul>
                     </div>
                     <div class="col-5 text-center">
-                      <img src="../../dist/img/user1-128x128.jpg" alt="" class="img-circle img-fluid">
+                      <img src="/pms/resources/dist/img/user1-128x128.jpg" alt="" class="img-circle img-fluid">
                     </div>
                   </div>
                 </div>
@@ -58,6 +60,8 @@
                 </div>
               </div>
             </div>
+          	</c:forEach>
+            
             <div class="col-12 col-sm-6 col-md-4 d-flex align-items-stretch">
               <div class="card bg-light">
                 <div class="card-header text-muted border-bottom-0">

@@ -46,4 +46,7 @@ public class MemberDAO {
 	public void logout(HttpSession session) {
 		session.invalidate();
 	}
+	public int getMemberCnt() {
+		return sqlSession.selectOne("MemberDAO.getMemberCnt");
+	}
 }
